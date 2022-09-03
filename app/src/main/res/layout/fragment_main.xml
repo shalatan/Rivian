@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="340dp"
+            android:background="@color/black"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/car_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:src="@drawable/ic_carrr"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:padding="8dp"
+            android:rowCount="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/car_image">
+
+            <include
+                layout="@layout/item_energy"
+                android:layout_width="184dp"
+                android:layout_height="158dp"
+                android:layout_margin="2dp" />
+
+            <include
+                layout="@layout/item_energy"
+                android:layout_width="184dp"
+                android:layout_height="158dp"
+                android:layout_margin="2dp" />
+
+            <include
+                layout="@layout/item_energy"
+                android:layout_width="184dp"
+                android:layout_height="158dp"
+                android:layout_margin="2dp" />
+
+            <include
+                layout="@layout/item_energy"
+                android:layout_width="184dp"
+                android:layout_height="158dp"
+                android:layout_margin="2dp" />
+        </GridLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
