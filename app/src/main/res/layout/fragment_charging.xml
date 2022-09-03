@@ -11,20 +11,95 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <View
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="340dp"
             android:background="@color/black"
+            android:src="@drawable/pattern"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/back_image"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/charging_background"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_arrow_left"
+            app:layout_constraintEnd_toStartOf="@+id/textView"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="ENERGY"
+            android:textColor="@color/grey"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/back_image"
+            app:layout_constraintEnd_toStartOf="@+id/profile_image"
+            app:layout_constraintStart_toEndOf="@+id/back_image"
+            app:layout_constraintTop_toTopOf="@id/back_image" />
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/profile_picture"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/distance_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/main_distance_left_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="248"
+                android:textColor="@color/white"
+                android:textSize="48sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="mi"
+                android:textColor="@color/grey"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <include
+            layout="@layout/layout_charging"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/distance_layout" />
 
         <ImageView
             android:id="@+id/car_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="24dp"
             android:padding="16dp"
             android:src="@drawable/ic_carrr"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/distance_layout" />
 
         <GridLayout
             android:layout_width="wrap_content"
@@ -48,17 +123,6 @@
                 android:layout_height="158dp"
                 android:layout_margin="2dp" />
 
-            <include
-                layout="@layout/item_energy"
-                android:layout_width="184dp"
-                android:layout_height="158dp"
-                android:layout_margin="2dp" />
-
-            <include
-                layout="@layout/item_energy"
-                android:layout_width="184dp"
-                android:layout_height="158dp"
-                android:layout_margin="2dp" />
         </GridLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
