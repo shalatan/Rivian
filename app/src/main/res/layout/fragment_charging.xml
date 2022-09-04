@@ -150,6 +150,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/open_port_button" />
 
+        <!--below hardcoded items can be replaced with recyclerView with these same layouts-->
         <include
             android:id="@+id/item_1"
             layout="@layout/item_charging_stations"

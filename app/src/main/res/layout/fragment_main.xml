@@ -107,7 +107,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:columnCount="2"
-            android:padding="8dp"
+            android:padding="4dp"
             android:rowCount="2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -118,28 +118,28 @@
                 layout="@layout/item_energy"
                 android:layout_width="184dp"
                 android:layout_height="158dp"
-                android:layout_margin="2dp" />
+                android:layout_margin="4dp" />
 
             <include
                 android:id="@+id/grid_2"
-                layout="@layout/item_energy"
+                layout="@layout/item_location"
                 android:layout_width="184dp"
                 android:layout_height="158dp"
-                android:layout_margin="2dp" />
+                android:layout_margin="4dp" />
 
             <include
                 android:id="@+id/grid_3"
-                layout="@layout/item_energy"
+                layout="@layout/item_aircon"
                 android:layout_width="184dp"
                 android:layout_height="158dp"
-                android:layout_margin="2dp" />
+                android:layout_margin="4dp" />
 
             <include
                 android:id="@+id/grid_4"
-                layout="@layout/item_energy"
+                layout="@layout/item_controls"
                 android:layout_width="184dp"
                 android:layout_height="158dp"
-                android:layout_margin="2dp" />
+                android:layout_margin="4dp" />
         </GridLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

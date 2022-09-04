@@ -4,6 +4,7 @@
     android:layout_width="180dp"
     android:layout_height="160dp"
     app:cardBackgroundColor="@color/green"
+    app:cardElevation="4dp"
     app:cardCornerRadius="10dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -12,7 +13,7 @@
         android:padding="12dp">
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/image_battery"
+            android:id="@+id/image_aircon"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="#34FFFFFF"
@@ -28,9 +29,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="14dp"
             android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="@id/image_battery"
-            app:layout_constraintStart_toEndOf="@id/image_battery"
-            app:layout_constraintTop_toTopOf="@id/image_battery">
+            app:layout_constraintBottom_toBottomOf="@id/image_aircon"
+            app:layout_constraintStart_toEndOf="@id/image_aircon"
+            app:layout_constraintTop_toTopOf="@id/image_aircon">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -53,7 +54,7 @@
             android:layout_marginStart="24dp"
             android:src="@drawable/ic_arrow_right"
             app:layout_constraintStart_toEndOf="@id/energy_linear_layout_1"
-            app:layout_constraintTop_toTopOf="@id/image_battery" />
+            app:layout_constraintTop_toTopOf="@id/image_aircon" />
 
         <ImageView
             android:id="@+id/energy_left_meter_progress"
