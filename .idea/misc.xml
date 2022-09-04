@@ -3,10 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/GIthub Projects/Rivian/app/src/main/res/drawable/background_curved.xml" value="0.188" />
         <entry key="..\:/Android/GIthub Projects/Rivian/app/src/main/res/drawable/charging_background.xml" value="0.188" />
         <entry key="..\:/Android/GIthub Projects/Rivian/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Android/GIthub Projects/Rivian/app/src/main/res/layout/fragment_charging.xml" value="0.25" />
         <entry key="..\:/Android/GIthub Projects/Rivian/app/src/main/res/layout/fragment_main.xml" value="0.2375" />
+        <entry key="..\:/Android/GIthub Projects/Rivian/app/src/main/res/layout/item_charging_stations.xml" value="0.25" />
         <entry key="..\:/Android/GIthub Projects/Rivian/app/src/main/res/layout/item_energy.xml" value="0.25" />
         <entry key="..\:/Android/GIthub Projects/Rivian/app/src/main/res/layout/layout_charging.xml" value="0.24895833333333334" />
         <entry key="..\:/Android/Rivian/app/src/main/res/drawable/ic_battery_charging.xml" value="0.188" />

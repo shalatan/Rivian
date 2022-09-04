@@ -67,7 +67,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/main_distance_left_text"
+                android:id="@+id/distance_left_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="248"
@@ -95,35 +95,84 @@
         <ImageView
             android:id="@+id/car_image"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="240dp"
             android:layout_marginTop="24dp"
             android:padding="16dp"
-            android:src="@drawable/ic_carrr"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_car_png_2"
             app:layout_constraintTop_toBottomOf="@id/distance_layout" />
 
-        <GridLayout
+        <TextView
+            android:id="@+id/battery_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:columnCount="2"
-            android:padding="8dp"
-            android:rowCount="2"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"
+            android:text="Battery level"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/car_image">
+            app:layout_constraintTop_toBottomOf="@id/car_image" />
 
-            <include
-                layout="@layout/item_energy"
-                android:layout_width="184dp"
-                android:layout_height="158dp"
-                android:layout_margin="2dp" />
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/battery_progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_margin="16dp"
+            android:progress="60"
+            app:indicatorColor="@color/green"
+            app:layout_constraintTop_toBottomOf="@id/battery_text"
+            app:trackColor="@color/track_color"
+            app:trackThickness="16dp" />
 
-            <include
-                layout="@layout/item_energy"
-                android:layout_width="184dp"
-                android:layout_height="158dp"
-                android:layout_margin="2dp" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/open_port_button"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="16dp"
+            android:text="OPEN CHARGE PORT"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/battery_progress_bar"
+            app:strokeColor="#F3AF3D"
+            app:strokeWidth="2dp" />
 
-        </GridLayout>
+        <TextView
+            android:id="@+id/chargers_point_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+            android:text="Chargers near you"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/open_port_button" />
+
+        <include
+            android:id="@+id/item_1"
+            layout="@layout/item_charging_stations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/chargers_point_text" />
+
+        <include
+            android:id="@+id/item_2"
+            layout="@layout/item_charging_stations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            app:layout_constraintTop_toBottomOf="@id/item_1" />
+
+        <include
+            android:id="@+id/item_3"
+            layout="@layout/item_charging_stations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            app:layout_constraintTop_toBottomOf="@id/item_2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

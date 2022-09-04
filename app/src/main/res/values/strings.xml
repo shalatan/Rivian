@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Rivian</string>
+    <string name="location_text">100 N Mitsubishi Motorway,\nNormal, IL, 61761</string>
 </resources>
