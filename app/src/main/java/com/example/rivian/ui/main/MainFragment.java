@@ -8,13 +8,17 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
+import androidx.navigation.Navigator;
+import androidx.navigation.fragment.FragmentNavigator;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.example.rivian.R;
 import com.example.rivian.databinding.FragmentMainBinding;
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainFragment extends Fragment {
 
@@ -36,7 +40,7 @@ public class MainFragment extends Fragment {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Shared Element Transition Not Working
+//                Shared Element Transition not working as expected, even after following the documentations and tutorials
 //                FragmentNavigator.Extras extras = new FragmentNavigator.Extras.Builder()
 //                        .addSharedElement(binding.carImage, "car_image")
 //                        .build();
@@ -49,6 +53,13 @@ public class MainFragment extends Fragment {
                 Navigation.findNavController(view).navigate(R.id.action_mainFragment_to_chargingFragment);
             }
         });
+
+        binding.grid3.getRoot().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Not yet implemented", Snackbar.LENGTH_SHORT).show();
+            }
+        });
         return binding.getRoot();
     }
 
@@ -56,7 +67,6 @@ public class MainFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mViewModel = new ViewModelProvider(this).get(MainViewModel.class);
-        // TODO: Use the ViewModel
 
     }
 }

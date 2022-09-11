@@ -13,8 +13,9 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="340dp"
-            android:background="@color/black"
+            android:layout_height="300dp"
+            android:background="#1C1C1C"
+            android:scaleType="fitXY"
             android:src="@drawable/pattern"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,8 +23,7 @@
             android:id="@+id/back_image"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
+            android:layout_margin="16dp"
             android:background="@drawable/charging_background"
             android:scaleType="centerInside"
             android:src="@drawable/ic_arrow_left"
@@ -49,8 +49,7 @@
             android:id="@+id/profile_image"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="16dp"
+            android:layout_margin="16dp"
             android:src="@drawable/profile_picture"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView"
@@ -60,19 +59,19 @@
             android:id="@+id/distance_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="120dp"
+            android:layout_marginTop="60dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/distance_left_text"
+                android:id="@+id/main_distance_left_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="248"
                 android:textColor="@color/white"
-                android:textSize="48sp" />
+                android:textSize="64sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -84,10 +83,11 @@
         </LinearLayout>
 
         <include
+            android:id="@+id/charging_layout"
             layout="@layout/layout_charging"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/distance_layout" />
@@ -95,12 +95,12 @@
         <ImageView
             android:id="@+id/car_image"
             android:layout_width="match_parent"
-            android:layout_height="240dp"
-            android:layout_marginTop="24dp"
+            android:layout_height="180dp"
             android:padding="16dp"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_car_png_2"
-            app:layout_constraintTop_toBottomOf="@id/distance_layout" />
+            android:transitionName="transition_car"
+            app:layout_constraintTop_toBottomOf="@id/charging_layout" />
 
         <TextView
             android:id="@+id/battery_text"
@@ -108,8 +108,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="Battery level"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/car_image" />
 
@@ -128,7 +128,7 @@
             android:id="@+id/open_port_button"
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="56dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="36dp"
             android:layout_marginEnd="16dp"
@@ -136,7 +136,7 @@
             android:textColor="@color/black"
             app:layout_constraintTop_toBottomOf="@id/battery_progress_bar"
             app:strokeColor="#F3AF3D"
-            app:strokeWidth="2dp" />
+            app:strokeWidth="1dp" />
 
         <TextView
             android:id="@+id/chargers_point_text"
@@ -150,7 +150,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/open_port_button" />
 
-        <!--below hardcoded items can be replaced with recyclerView with these same layouts-->
+        <!--below hardcoded items can be replaced with recyclerView with same item layouts-->
         <include
             android:id="@+id/item_1"
             layout="@layout/item_charging_stations"
